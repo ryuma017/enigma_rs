@@ -1,8 +1,4 @@
-mod interior;
+mod control;
+mod wheels;
 
-pub use interior::LETTERS;
-
-
-fn show() {
-    println!("{}", LETTERS);
-}
+pub use wheels::LETTERS;

@@ -1,5 +1,8 @@
 use enigma_i::LETTERS;
+use std::collections::HashMap;
 
 fn main() {
-    println!("{}", LETTERS);
+    let hashmap = HashMap::from([
+        ("aeiou", "aaaaa")
+    ]);
 }
