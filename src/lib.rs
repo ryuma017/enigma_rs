@@ -1,4 +1,5 @@
 mod control;
 mod wheels;
 
-pub use wheels::LETTERS;
+pub use control::PlugBoard;
+pub use control::letters;
