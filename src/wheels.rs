@@ -1,18 +1,13 @@
-// pub enum RotorWheels {
-//     I,
-//     II,
-//     III,
-//     IV,
-//     V,
-// }
+pub const ROTORS: [(&str, char); 5] = [
+    ("EKMFLGDQVZNTOWYHXUSPAIBRCJ", 'Q'), // I
+    ("AJDKSIRUXBLHWTMCQGZNPYFVOE", 'E'), // II
+    ("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V'), // III
+    ("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J'), // IV
+    ("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z'), // V
+];
 
-// pub enum ReflectorWheels {
-//     A,
-//     B,
-//     C,
-// }
-
-// pub enum Wheels {
-//     Rotors(RotorWheels),
-//     Reflectors(ReflectorWheels),
-// }
+pub const REFLECTORS: [&str; 3] = [
+    "EJMZALYXVBWFCRQUONTSPIKHGD", // UKW-A
+    "YRUHQSLDPXNGOKMIEBFZCWVJAT", // UKW-B
+    "FVPJIAOYEDRZXWGCTKUQSBNMHL", // UKW-C
+];
