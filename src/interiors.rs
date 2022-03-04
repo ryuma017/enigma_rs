@@ -1,5 +1,6 @@
 use crate::ToChar;
 use crate::Index;
+use crate::wheels::{ROTORS, REFLECTORS};
 
 
 //--- PlugBoard ---//
@@ -57,7 +58,7 @@ mod tests {
     #[test]
     fn no_plugs() {
         let plugboard = PlugBoard::set("");
-        assert_eq!(plugboard.convert_forward(0), 0);
+        assert_eq!(plugboard.convert(0), 0);
     }
 
     #[test]
@@ -65,8 +66,8 @@ mod tests {
         let plugboard = PlugBoard::set("AC BD EF");
         println!("{:?}", ('A'..'Z').collect::<Vec<char>>());
         println!("{:?}", plugboard.wiring_map);
-        assert_eq!(plugboard.convert_forward(1), 3);
-        assert_eq!(plugboard.convert_forward(2), 0);
-        assert_eq!(plugboard.convert_forward(5), 4);
+        assert_eq!(plugboard.convert(1), 3);
+        assert_eq!(plugboard.convert(2), 0);
+        assert_eq!(plugboard.convert(5), 4);
     }
 }

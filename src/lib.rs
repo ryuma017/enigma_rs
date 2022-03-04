@@ -9,7 +9,7 @@ pub use enigma::Enigma;
 trait Index {
     fn letter_index(&self) -> usize;
 
-    fn map_index(&self, map: &Vec<char>) -> usize;
+    fn map_index(&self, map: &[char]) -> usize;
 }
 
 impl Index for char {
@@ -17,7 +17,7 @@ impl Index for char {
         *self as usize - 65
     }
 
-    fn map_index(&self, map: &Vec<char>) -> usize {
+    fn map_index(&self, map: &[char]) -> usize {
         map.iter().position(|c| *c == *self).unwrap()
     }
 }
